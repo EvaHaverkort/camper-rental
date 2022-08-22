@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :offers do
-    resources :bookings, only: [:index, :show, :new, :create]
+  resources :offers, only: [:index, :show]
+  
+  resources :users do
+    resources :bookings, only: [:index, :show, :destroy, :new, :create]
+    resources :offers, only: [:index, :show, :destroy, :new, :create, :edit, :update] # all, so only is redudant
   end
 end
