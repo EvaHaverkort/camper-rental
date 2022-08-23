@@ -1,12 +1,15 @@
-<h1>hello</h1>
-<% @bookings.each do |booking| %>
-  <% user = User.find(booking.user_id)%>
-  <p>Person that booked: </p>
-  <%= user.email%>
+<h1>Bookings</h1>
 
-  <% booking.offer_id%>
-  <% offer = Offer.find(booking.offer_id)%>
+<% @bookings.each do |booking| %>
+  <%# <% user = booking.user%>
+  <p>Person that booked: </p>
+  <%= booking.user.email%>
+
   <p>Offer: </p>
+  <%# <% booking.offer_id%>
+  <%# offer = Offer.find(booking.offer_id)%>
+  <p><%= booking.offer.brand %></p>
+
   <br>
   <p> Start date: <%= booking.start_date%></p>
   <p> End date: <%= booking.end_date%></p>
