@@ -1,0 +1,68 @@
+.footer {
+  background: #4B5842;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px;
+  color: white;
+
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-payments {
+  text-align: center;
+  font-size: small;
+  opacity: 0.8;
+  img {
+    width: 45px;
+    height: 40px;
+    padding: px;
+  }
+}
+
+.img-sponsor1 {
+  width: 70px;
+  height: 40px;
+}
+
+.img-sponsor2 {
+  width: 60px;
+  height: 40px;
+}
+
+.footer-privacy a {
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0px 10px;
+}
+
+.footer-terms a {
+  color: white;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0px 10px;
+}
+
+.footer-privacy a:hover {
+  opacity: 1;
+}
+
+.footer-terms a:hover {
+  opacity: 1;
+}
