@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #84A98C;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +8,31 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 45px;
+}
+
+.nav-link {
+  margin-right: 20px;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Poppins";
+}
+
+#navbarLanguageDropdown {
+margin-right: 20px;
+text-decoration: none;
+color: #28322A;
+}
+
+#navbarSupportedContent {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  display: inline-block;
 }
