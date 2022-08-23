@@ -15,4 +15,4 @@ class BookingsController < ApplicationController
 
 end
 
-private
+# private
