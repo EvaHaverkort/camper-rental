@@ -1,0 +1,19 @@
+<% @bookings.each do |booking| %>
+  <% user = User.find(booking.user_id)%>
+  <p>Person that booked: </p>
+  <%= user.email%>
+
+  <% booking.offer_id%>
+  <% offer = Offer.find(booking.offer_id)%>
+  <p>Offer: </p>
+  <br>
+  <p> Start date: <%= booking.start_date%></p>
+  <p> End date: <%= booking.end_date%></p>
+  <p> Price: <%= booking.final_price%></p>
+  <br>
+  <% if booking.accepted == true %>
+    <p>Booking accepted </p>
+  <% else %>
+    <p>Accept booking? yes/no </p>
+  <%end%>
+<%end%>
