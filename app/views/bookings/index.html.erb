@@ -19,18 +19,18 @@
     <div class="card-product-info">
       <div>
       <p><strong>Person that booked:</strong> <%= booking.user.email%></p>
-      <p><strong>Motorhome:</strong> <p class="card-title"><%= booking.offer.brand %></p></p>
+      <p><strong>Brand Motorhome:</strong> <p class="card-title"><%= booking.offer.brand %></p></p>
       <p><strong>Name:</strong></p>
       <h5 class="card-name"></h5>
-      <%= booking.offer.name %>
+      <strong><%= booking.offer.name %></strong>
       <%# <% booking.offer_id%>
       <%# offer = Offer.find(booking.offer_id)%>
       </div>
       <br>
       <div>
-      <p class="card-date"> Start date: <%= booking.start_date%></p>
-      <p class="card-date"> End date: <%= booking.end_date%></p>
-      <p class="card-price"> Price: <%= booking.final_price%> euros</p>
+      <p class="card-date"><strong> Start date: </strong><%= booking.start_date%></p>
+      <p class="card-date"><strong> End date: </strong><%= booking.end_date%></p>
+      <p class="card-price"><strong> Price: </strong><%= booking.final_price%> euros</p>
       </div>
       <br>
       <% if booking.accepted == true %>
