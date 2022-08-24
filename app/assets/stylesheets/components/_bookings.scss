@@ -1,4 +1,4 @@
-h1 {
+.card-title1 {
   font-size: 30px;
   color: #84A98C;
   text-align: left;
@@ -10,7 +10,9 @@ h1 {
   flex-direction: row;
   box-shadow: 2px 2px 3px lightgrey;
   margin: 20px;
-
+}
+.card-img-top {
+  margin-right: 30px;
 }
 .flash {
   padding: 16px 24px;
