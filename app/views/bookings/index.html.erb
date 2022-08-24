@@ -1,13 +1,13 @@
 <h1>Bookings</h1>
 
 <% @bookings.each do |booking| %>
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src=<%=booking.offer.picture_url%> alt="Card image cap">
   <%# <% user = booking.user%>
   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <p>Person that booked: <%= booking.user.email%></p>
 
-    <p>Offer: <h5 class="card-title"><%= booking.offer.brand %></h5></p>
+    <p>Name: <h5 class="card-title"><%= booking.offer.name %></h5></p>
     <%# <% booking.offer_id%>
     <%# offer = Offer.find(booking.offer_id)%>
 
