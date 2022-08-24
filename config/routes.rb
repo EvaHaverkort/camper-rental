@@ -27,11 +27,6 @@ Rails.application.routes.draw do
   #   resources :bookings, only: [:index, :show, :destroy, :new, :create]
   #   resources :offers, only: [:index, :show, :destroy, :new, :create, :edit, :update] # all, so only is redudant
   # end
-
-
-
   # user login is implied, you don't need to do user in the url, because that will show
   # the user inofmration, not imply that you are the user.
-
-
 end
