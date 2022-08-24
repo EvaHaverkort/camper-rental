@@ -61,8 +61,8 @@ passwords = ["pgh4iqhpg489q", "2r9pjfkae", "3j3231r83p", "fejiagp3hq2g", "feipaq
     availiblity_start_date: Faker::Date.between(from: '2022-08-23', to: '2014-09-25'),
     availibility_end_date: Faker::Date.between(from: '2022-09-25', to: '2022-11-25'),
     price: rand(1000..9000),
-    name: src_pictures_campers.sample,
-    picture_url: names_campers.sample
+    name: names_campers.sample,
+    picture_url: src_pictures_campers.sample
   )
   offer.save!
   booking = Booking.new(
