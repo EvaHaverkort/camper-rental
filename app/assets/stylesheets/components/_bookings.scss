@@ -5,15 +5,18 @@
   box-shadow: 2px 2px 3px lightgrey;
   text-shadow: 2px 2px 3px lightgrey;
 }
-.card {
+
+.card_picture {
   display: flex;
   flex-direction: row;
   box-shadow: 2px 2px 3px lightgrey;
   margin: 20px;
 }
+
 .card-img-top {
   margin-right: 30px;
 }
+
 .flash {
   padding: 16px 24px;
   display: flex;

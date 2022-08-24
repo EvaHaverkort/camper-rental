@@ -15,7 +15,9 @@
 .cards-homepage {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 2px 2px 3px lightgrey;
   grid-gap: 16px;
+  margin: 20px;
 }
 
 /* Why does the text size not change and why can't i remove the obrder of this banner*/
