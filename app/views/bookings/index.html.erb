@@ -1,27 +1,46 @@
+
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Great!</strong>Your booking was done successfully</span>
+  <a data-bs-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
+</div>
+
 <h1>Bookings</h1>
 
 <% @bookings.each do |booking| %>
+<<<<<<< HEAD
+=======
   <img class="card-img-top" src=<%=booking.offer.picture_url%> alt="Card image cap">
+>>>>>>> f3434f4653059b189eb95781e793941c69b962a9
   <%# <% user = booking.user%>
   <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <p>Person that booked: <%= booking.user.email%></p>
+    <%= image_tag "van3.jpg", class: "card-img-top" %>
+    <%# <img class="card-img-top" src="van3.jpg" alt="Van"> %>
+    <div class="card-body">
+      <p>Person that booked: <%= booking.user.email%></p>
 
+<<<<<<< HEAD
+      <p>Offer: <h5 class="card-title"><%= booking.offer.brand %></h5></p>
+      <%# <% booking.offer_id%>
+      <%# offer = Offer.find(booking.offer_id)%>
+=======
 
     <p>Name: <h5 class="card-title"><%= booking.offer.name %></h5></p>
     <%# <% booking.offer_id%>
     <%# offer = Offer.find(booking.offer_id)%>
+>>>>>>> f3434f4653059b189eb95781e793941c69b962a9
 
-    <br>
-    <p class="card-text"> Start date: <%= booking.start_date%></p>
-    <p class="card-text"> End date: <%= booking.end_date%></p>
-    <p class="card-text"> Price: <%= booking.final_price%> euros</p>
-    <br>
-    <% if booking.accepted == true %>
-      <p class="card-text">Booking accepted </p>
-    <% else %>
-      <p class="card-text">Accept booking? yes/no </p>
-    <%end%>
-  </div>
+      <br>
+      <p class="card-text"> Start date: <%= booking.start_date%></p>
+      <p class="card-text"> End date: <%= booking.end_date%></p>
+      <p class="card-text"> Price: <%= booking.final_price%> euros</p>
+      <br>
+      <% if booking.accepted == true %>
+        <p class="card-text">Booking accepted </p>
+      <% else %>
+        <p class="card-text">Accept booking? yes/no </p>
+      <%end%>
+    </div>
   </div>
 <%end%>
