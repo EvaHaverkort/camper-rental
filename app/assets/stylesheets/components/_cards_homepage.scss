@@ -1,0 +1,65 @@
+
+/* Underneath banner */
+.works {
+  color: #313030;
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.card_hearder h2 {
+  size: 20px;
+}
+
+.cards-homepage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+/* Why does the text size not change and why can't i remove the obrder of this banner*/
+/* Why won't my cards move in a row?*/
+
+// .card {
+//   background-color: white;
+//   padding: 20px;
+//   margin-top: 20px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 180px;
+//   border-radius: 20px;
+//   margin-bottom: 40px;
+// }
+
+i {
+  font-size: 40px;
+  color: #4B5842;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card p {
+  size: 10px;
+}
+
+
+
+// .list {
+//   text-align: center;
+// }
+
+// .card h2 {
+//   text-align: center;
+//   size: 20px;
+// }
+
+// p {
+//   text-align: center;
+// }
+
+// .container {
+//   display: flex;
+//   justify-content:space-between;
+// }
