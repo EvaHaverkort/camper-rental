@@ -1,0 +1,11 @@
+<div class="container">
+<h3>New booking</h3>
+
+<%= simple_form_for [@offer, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+<p>Final price: <%= @offer.price %> euros</p>
+  <%= f.submit "Create booking", class: "btn btn-secondary" %>
+<% end %>
+
+</div>
