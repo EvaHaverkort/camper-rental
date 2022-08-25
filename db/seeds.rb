@@ -54,6 +54,7 @@ img_urls = ["https://i.pinimg.com/564x/54/4e/60/544e60fa76cf6b7eca8f448ae3161c54
     password: passwords.sample,
     # encrypted_password is the same as password
   )
+  puts "1. user created"
   user.save!
   offer = Offer.new(
     user_id: user.id,
@@ -65,10 +66,14 @@ img_urls = ["https://i.pinimg.com/564x/54/4e/60/544e60fa76cf6b7eca8f448ae3161c54
     name: names_campers.sample,
     picture_url: src_pictures_campers.sample
   )
+  puts "2. offer new"
 
   file = URI.open(img_urls.sample)
+  puts "3. opened image"
   offer.photo.attach(io: file, filename: "van.jpg", content_type: "image/jpg")
+  puts "4. photo attached"
   offer.save!
+  puts "5. offer saved!"
   booking = Booking.new(
     user_id: user.id,
     offer_id: offer.id,
