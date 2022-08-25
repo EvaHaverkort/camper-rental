@@ -8,14 +8,25 @@
   padding-top: 10px;
 }
 
-.card_hearder h2 {
-  size: 20px;
-}
-
 .cards-homepage {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-bottom: 100px;
+  // align-items: center;
+  // justify-items: center;
+}
+
+.cards-homepage .card {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.cards-homepage .card h4 {
+  color: gray;
 }
 
 /* Why does the text size not change and why can't i remove the obrder of this banner*/
@@ -33,15 +44,14 @@
 // }
 
 i {
-  font-size: 40px;
+  font-size: 35px;
   color: #4B5842;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 10px;
 }
 
-.card p {
+.cards-homepage .card p {
   size: 10px;
+  color: gray;
 }
 
 
