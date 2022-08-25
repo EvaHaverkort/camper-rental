@@ -13,7 +13,7 @@ class ApplicationPolicy
   end
 
   def show?
-    false
+    false # default, do true in policy specific ones 
   end
 
   def create?
@@ -35,6 +35,8 @@ class ApplicationPolicy
   def destroy?
     false
   end
+
+  # scope??
 
   class Scope
     def initialize(user, scope)
