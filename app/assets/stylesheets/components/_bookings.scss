@@ -38,7 +38,7 @@
   border: 2px solid #FD1015;
 }
 
-.btn-ghost-yes {
+.btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 8px 15px;
@@ -49,24 +49,10 @@
   font-size: 13px;
 }
 
-.btn-ghost-yes:hover {
+.btn-ghost:hover {
   opacity: 1;
 }
 
-.btn-ghost-no {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  font-size: 13px;
-}
-
-.btn-ghost-no:hover {
-  opacity: 1;
-}
 .card-booker-brand-name .card-p {
   font-size: 13px;
 }
@@ -102,13 +88,4 @@
 .card-text {
   color:#84a98c;
 }
-.btn-ghost-details {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  font-size: 13px;
-}
+
