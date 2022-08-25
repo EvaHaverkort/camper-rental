@@ -1,1 +1,39 @@
-Details of your booking
+booking
+
+  <div class="camper-product d-flex">
+    <%# <% user = booking.user%>
+    <div class="card_picture" style="width: 18rem;">
+      <%= image_tag "van3.jpg", class: "card-img-top" %>
+      <%# <img class="card-img-top" src="..." alt="Van"> %>
+    </div>
+    <div class="card-product-info d-flex">
+      <div class="card-booker-brand-name">
+        <p class="card-title"><strong>Booker:</strong></p>
+        <p class="card-p"><%= @booking.user.email%></p>
+        <p class="card-title"><strong>Brand Motorhome:</strong></p>
+        <p class="card-p"><%= @booking.offer.brand %></p>
+        <p class="card-title"><strong>Name:</strong></p>
+        <p class="card-booking-offer-name"><%= @booking.offer.name %></p>
+        <br>
+        <br>
+        <%=link_to "See more details", booking_path(@booking.id), class: "btn btn-ghost-details"%>
+
+        <%# <% booking.offer_id%>
+        <%# offer = Offer.find(booking.offer_id)%>
+      </div>
+      <div class="card-dates-and-accepted">
+        <p class="card-date"><strong> Dates: </strong></p>
+        <p class="card-p"><%= @booking.start_date%> to <%= @booking.end_date%></p>
+        <p class="card-price"><strong>Total:</strong></p>
+        <p class="card-p">€ <%= @booking.final_price%></p>
+
+      <% if @booking.accepted == true %>
+        <p class="card-text">Booking accepted </p>
+      <% else %>
+        <p class="card-text"><strong>Do you want to accept?</strong></p>
+        <a class="btn btn-ghost-yes" href="#">Yes</a>
+        <a class="btn btn-ghost-no" href="#">No</a>
+      </div>
+      <%end%>
+    </div>
+  </div>
