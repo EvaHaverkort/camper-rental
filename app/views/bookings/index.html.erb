@@ -4,38 +4,46 @@
     <i class="fas fa-times"></i>
   </a>
 </div>
+
 <div class="card-title1">
   <p>Bookings</p>
 </div>
-<div class="camper-product">
+
 <% @bookings.each do |booking| %>
-  <%# <% user = booking.user%>
-  <div class="card_picture" style="width: 18rem;">
-    <%= image_tag "van3.jpg", class: "card-img-top" %>
-    <%# <img class="card-img-top" src="..." alt="Van"> %>
-    <div class="card-product-info">
-      <div>
-      <p><strong>Person that booked:</strong> <%= booking.user.email%></p>
-      <p><strong>Brand Motorhome:</strong> <p class="card-title"><%= booking.offer.brand %></p></p>
-      <p><strong>Name:</strong></p>
-      <h5 class="card-name"></h5>
-      <strong><%= booking.offer.name %></strong>
-      <%# <% booking.offer_id%>
-      <%# offer = Offer.find(booking.offer_id)%>
+  <div class="camper-product d-flex">
+    <%# <% user = booking.user%>
+    <div class="card_picture" style="width: 18rem;">
+      <%= image_tag "van3.jpg", class: "card-img-top" %>
+      <%# <img class="card-img-top" src="..." alt="Van"> %>
+    </div>
+    <div class="card-product-info d-flex">
+      <div class="card-booker-brand-name">
+        <p class="card-title"><strong>Booker:</strong></p>
+        <p class="card-p"><%= booking.user.email%></p>
+        <p class="card-title"><strong>Brand Motorhome:</strong></p>
+        <p class="card-p"><%= booking.offer.brand %></p>
+        <p class="card-title"><strong>Name:</strong></p>
+        <p class="card-booking-offer-name"><%= booking.offer.name %></p>
+        <br>
+        <br>
+        <p class="btn btn-ghost-details" href="#">See more details</p>
+        <%# <% booking.offer_id%>
+        <%# offer = Offer.find(booking.offer_id)%>
       </div>
-      <br>
-      <div>
-      <p class="card-date"><strong> Start date: </strong><%= booking.start_date%></p>
-      <p class="card-date"><strong> End date: </strong><%= booking.end_date%></p>
-      <p class="card-price"><strong> Price: </strong><%= booking.final_price%> euros</p>
-      </div>
-      <br>
+      <div class="card-dates-and-accepted">
+        <p class="card-date"><strong> Dates: </strong></p>
+        <p class="card-p"><%= booking.start_date%> to <%= booking.end_date%></p>
+        <p class="card-price"><strong>Total:</strong></p>
+        <p class="card-p">€ <%= booking.final_price%></p>
+
       <% if booking.accepted == true %>
         <p class="card-text">Booking accepted </p>
       <% else %>
-        <p class="card-text">Accept booking? yes/no </p>
+        <p class="card-text"><strong>Do you want to accept?</strong></p>
+        <a class="btn btn-ghost-yes" href="#">Yes</a>
+        <a class="btn btn-ghost-no" href="#">No</a>
+      </div>
       <%end%>
     </div>
   </div>
 <%end%>
-</div>

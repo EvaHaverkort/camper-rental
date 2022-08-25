@@ -7,8 +7,6 @@
 }
 
 .card_picture {
-  display: flex;
-  flex-direction: row;
   box-shadow: 2px 2px 3px lightgrey;
   margin: 20px;
 }
@@ -38,4 +36,79 @@
 
 .flash-danger {
   border: 2px solid #FD1015;
+}
+
+.btn-ghost-yes {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 13px;
+}
+
+.btn-ghost-yes:hover {
+  opacity: 1;
+}
+
+.btn-ghost-no {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 13px;
+}
+
+.btn-ghost-no:hover {
+  opacity: 1;
+}
+.card-booker-brand-name .card-p {
+  font-size: 13px;
+}
+.card-dates-and-accepted .card-p {
+  font-size: 13px;
+}
+
+.card-booking-offer-name {
+  font-size: 13px;
+}
+
+.card-date {
+  color: #84a98c;
+}
+.card-price {
+  color: #84a98c;
+}
+
+.card-title {
+  color: #84a98c;
+}
+.card-booking-offer-name {
+  color: black;
+}
+.card-dates-and-accepted {
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.card-booker-brand-name {
+  margin-left: 43px;
+  margin-top: 20px;
+}
+.card-text {
+  color:#84a98c;
+}
+.btn-ghost-details {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-size: 13px;
 }

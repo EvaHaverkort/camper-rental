@@ -8,7 +8,6 @@
 
 require "open-uri"
 require 'faker'
-require 'byebug'
 
 puts "Cleaning databases..."
 Booking.destroy_all
