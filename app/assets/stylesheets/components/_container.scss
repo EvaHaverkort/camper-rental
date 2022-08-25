@@ -3,6 +3,9 @@
   padding: 20px;
 }
 
+.centered-margin {
+  margin: 15px auto 100px auto;
+
 @media (max-width: 960px) {
   /* For a screen < 960px, this CSS will be read */
   .container {
@@ -22,4 +25,5 @@
   .container {
     width: 300px;
   }
+
 }

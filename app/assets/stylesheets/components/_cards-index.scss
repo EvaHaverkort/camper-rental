@@ -1,11 +1,16 @@
 .cards-grid-index {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 30px 50px;
 }
 
 .card-index-img {
-  height: 120px;
+  height: 243px;
   width: 100%;
   object-fit: cover;
+}
+
+.cards-grid-index .card {
+  border-radius: 10px;
+  border: 1px solid gainsboro;
 }
