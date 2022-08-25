@@ -26,7 +26,7 @@
         <p class="card-booking-offer-name"><%= booking.offer.name %></p>
         <br>
         <br>
-        <%=link_to "See more details", booking_path(booking.id), class: "btn btn-ghost-details"%>
+        <%=link_to "See more details", booking_path(booking.id), class: "btn btn-ghost"%>
 
         <%# <% booking.offer_id%>
         <%# offer = Offer.find(booking.offer_id)%>
@@ -41,8 +41,8 @@
         <p class="card-text">Booking accepted </p>
       <% else %>
         <p class="card-text"><strong>Do you want to accept?</strong></p>
-        <a class="btn btn-ghost-yes" href="#">Yes</a>
-        <a class="btn btn-ghost-no" href="#">No</a>
+        <a class="btn btn-ghost" href="#">Yes</a>
+        <a class="btn btn-ghost" href="#">No</a>
       </div>
       <%end%>
     </div>
