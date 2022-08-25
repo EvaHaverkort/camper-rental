@@ -7,13 +7,12 @@
         <div class="card-body">
           <h5 class="card-title"><%= offer.brand %></h5>
           <p class="card-text">€<%= offer.price %></p>
-          <%=link_to "More Details", offer_path(offer), class: "btn btn-secondary" %>
-          <%=link_to "Book", offer_bookings_path(offer), class: "btn btn-secondary" %>
+          <%=link_to "More Details", offer_path(offer), class: "btn-ghost-details" %>
+          <%=link_to "Book", offer_bookings_path(offer), class: "btn-ghost-details" %>
         </div>
       </div>
     <%end %>
   </div>
 </div>
 
-<%=link_to "Add new offer", new_offer_path, class: "btn btn-secondary"%>
-
+<%=link_to "Add new offer", new_offer_path, class: "btn-ghost-details"%>
