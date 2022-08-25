@@ -1,16 +1,15 @@
-<h1>Camper Vans</h1>
 
-<div class="container">
+<div class="container centered-margin">
   <div class="cards-grid-index">
     <% @offers.each do |offer| %>
       <div class="card flex-column" style="width: 18rem;">
-        <%= image_tag "van3.jpg", class: "card-index-img" %>
+        <%= cl_image_tag offer.photo.key, class: "card-index-img" %>
         <div class="card-body">
           <h5 class="card-title"><%= offer.brand %></h5>
           <p class="card-text">€<%= offer.price %></p>
-          <%=link_to "Check it out", offer_path(offer.id), class: "btn btn-primary" %>
+          <%=link_to "More Details", offer_path(offer), class: "btn btn-secondary" %>
+          <%=link_to "Book", offer_bookings_path(offer), class: "btn btn-secondary" %>
         </div>
       </div>
     <%end %>
   </div>
-</div>
