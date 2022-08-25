@@ -1,6 +1,7 @@
 class OffersController < ApplicationController
   before_action :find_offer, only: [:show, :edit, :update]
-  skip_before_action :authenticate_user!, only: [:index, :show] # you skip it only for these two 
+  skip_before_action :authenticate_user!, only: [:index, :show] # you skip it only for these two
+
 
   def index
     @offers = Offer.all
