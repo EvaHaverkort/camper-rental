@@ -1,1 +1,20 @@
-<p>test</p>
+<%= @offer.name %>
+<p>brand: <%= @offer.brand %></p>
+<p><%= @offer.description%></p>
+<br>
+
+<p>Availible from: <%= @offer.availiblity_start_date %>, to: <%= @offer.availibility_end_date %></p>
+<p>Price: <%= @offer.price %> euros</p>
+
+<%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn btn-secondary"%>
+<%=link_to "Back to offers", offers_path, class: "btn btn-secondary"%>
+
+<div class = "change-offer">
+<br>
+<%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
+<%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+
+</div>
+
+
+<%#picture to be inserted here%>
