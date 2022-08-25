@@ -5,7 +5,8 @@
       <div class="card flex-column" style="width: 18rem;">
         <%= cl_image_tag offer.photo.key, class: "card-index-img" %>
         <div class="card-body">
-          <h5 class="card-title"><%= offer.brand %></h5>
+          <h5 class="card-name"><%= offer.name %></h5>
+          <h6 class="card-title"><%= offer.brand %></h6>
           <p class="card-text">€<%= offer.price %></p>
           <%=link_to "More Details", offer_path(offer), class: "btn-ghost-details" %>
           <%=link_to "Book", offer_bookings_path(offer), class: "btn-ghost-details" %>
