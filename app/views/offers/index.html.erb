@@ -17,7 +17,5 @@
 
 
 <% if policy(Offer).new? # check if the user is authorized to see this button%>
-<%=link_to "Add new offer", new_offer_path, class: "btn btn-secondary"%>
-<% end %>
-
 <%=link_to "Add new offer", new_offer_path, class: "btn-ghost-details"%>
+<% end %>
