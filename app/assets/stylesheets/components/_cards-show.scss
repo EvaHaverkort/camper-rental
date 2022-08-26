@@ -1,0 +1,17 @@
+.card-show-img {
+  width: 120%;
+  height: 445px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+.margin-left {
+  margin-left: 145px;
+}
