@@ -65,7 +65,7 @@ addresses = ["16 Villa Gaudelet, Paris", "5 Avenue Anatole France, Paris", "3 Ru
     price: rand(1000..9000),
     address: addresses.sample,
     name: names_campers.sample,
-    picture_url: src_pictures_campers.sample
+    # picture_url: src_pictures_campers.sample
   )
   puts "2. offer new"
 
