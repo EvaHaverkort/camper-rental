@@ -3,7 +3,11 @@
   <div class="cards-grid-index">
     <% @offers.each do |offer| %>
       <div class="card flex-column" style="width: 18rem;">
+      <% if offer.photo.attached? %>
         <%= cl_image_tag offer.photo.key, class: "card-index-img" %>
+      <% else %>
+        <%= image_tag "camper-van.png" %>
+        <% end %>
         <div class="card-body">
           <h5 class="card-name"><%= offer.name %></h5>
           <h6 class="card-title"><%= offer.brand %></h6>
@@ -16,6 +20,14 @@
 </div>
 
 
+<<<<<<< HEAD
 <% if policy(Offer).new? # check if the user is authorized to see this button%>
 <%=link_to "Add new offer", new_offer_path, class: "btn-ghost-details"%>
 <% end %>
+=======
+<% if policy(Offer.new).new? # check if the user is authorized to see this button%>
+<%=link_to "Add new offer", new_offer_path, class: "btn btn-secondary"%>
+<% end %>
+
+<%#=link_to "Add new offer", new_offer_path, class: "btn-ghost-details"%>
+>>>>>>> 1cb2ac60d0f25b1a22108e0b06df0baae0fc910c

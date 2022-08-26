@@ -11,11 +11,16 @@
   </head>
 
   <body>
-    <%= render "shared/navbar"%>
-    <%=render "shared/flashes"%>
-    <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render "shared/footer" %>
+    <div class="page-container">
+      <%= render "shared/navbar"%>
+      <main id="main-content">
+        <%= yield %>
+      </main>
+      <%=render "shared/flashes"%>
+        <%# <p class="notice"><%= notice %>
+        <%# <p class="alert"><%= alert %>
+      <%= render "shared/footer" %>
+    </div>
+
   </body>
 </html>
