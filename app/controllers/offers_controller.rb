@@ -6,8 +6,16 @@ class OffersController < ApplicationController
   # do I also add it to bookings?
 
   def index
+    @offers = policy_scope(Offer) 
+    @markers = @offers.geocoded.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {offer: offer})
+      }
+    end
     # @offers = Offer.all,
-    @offers = policy_scope(Offer) # this calls the method policy_scope, which is called resolve in the policy.
+    # @offers = policy_scope(Offer) # this calls the method policy_scope, which is called resolve in the policy.
     # you pass Offer to scope.
     # authorize @offers
     # @offer = Offer.new
