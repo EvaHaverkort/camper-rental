@@ -35,7 +35,7 @@
         <p class="card-date"><strong> Dates: </strong></p>
         <p class="card-p"><%= booking.start_date%> to <%= booking.end_date%></p>
         <p class="card-price"><strong>Total:</strong></p>
-        <p class="card-p">€ <%= booking.final_price%></p>
+        <p class="card-p">€ <%= booking.offer.price%></p>
 
       <% if booking.accepted == true %>
         <p class="card-text">Booking accepted </p>
