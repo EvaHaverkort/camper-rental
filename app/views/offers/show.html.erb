@@ -10,14 +10,14 @@
     </div>
 
     <div class="card-info">
-      <div>
+      <div class="card-info-text">
         <p><%= @offer.description%></p>
         <br>
         <p>Availible from: <%= @offer.availiblity_start_date %>, to: <%= @offer.availibility_end_date %></p>
         <p>Price: <%= @offer.price %>€</p>
       </div>
 
-      <div class="btn-book d-flex justify-content-between">
+      <div class="btn-book d-flex justify-content-around">
         <%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn-ghost-details"%>
         <%=link_to "Back to offers", offers_path, class: "btn-ghost-details"%>
       </div>
@@ -32,8 +32,10 @@
       <% if policy(@offer).new? %>
         <div class = "change-offer">
           <br>
-          <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn-ghost-details"%>
-          <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn-ghost-details", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <div class="d-flex justify-content-around">
+            <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn-ghost-details"%>
+            <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn-ghost-details", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          </div>
         </div>
       <% end %>
       </div>
