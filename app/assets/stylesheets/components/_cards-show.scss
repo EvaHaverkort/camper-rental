@@ -1,3 +1,19 @@
+
+.card-icons i {
+  color: #84a98c;
+  font-size: 24px;
+}
+
+.card-icons.d-flex {
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
+.card-icons.d-flex p {
+  font-size: 13px;
+  text-align: center;
+}
+
 .card-show-img {
   width: 120%;
   height: 445px;
@@ -15,3 +31,4 @@
 .margin-left {
   margin-left: 145px;
 }
+
