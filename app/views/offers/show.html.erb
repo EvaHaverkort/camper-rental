@@ -18,22 +18,22 @@
       </div>
 
       <div class="btn-book d-flex justify-content-between">
-        <%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn btn-secondary"%>
-        <%=link_to "Back to offers", offers_path, class: "btn btn-secondary"%>
+        <%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn-ghost-details"%>
+        <%=link_to "Back to offers", offers_path, class: "btn-ghost-details"%>
       </div>
-<% if policy(@offer).update? %>
-<div class = "change-offer">
-<br>
-<%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
-<%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-</div>
+<%# <% if policy(@offer).update? %>
+<%# <div class = "change-offer">
+<br> %>
+<%# <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
+<%# <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<%# </div>
 <% end %>
 
       <% if policy(@offer).new? %>
         <div class = "change-offer">
           <br>
-          <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
-          <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn-ghost-details"%>
+          <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn-ghost-details", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
         </div>
       <% end %>
       </div>
