@@ -1,14 +1,27 @@
-<%= @offer.name %>
-<p>brand: <%= @offer.brand %></p>
-<p><%= @offer.description%></p>
-<br>
+<div class="container centered-margin">
+  <div class="margin-left">
+    <h5><%= @offer.name %></h5>
+    <h6><%= @offer.brand %></h6>
+  </div>
+  <br>
 
-<p>Availible from: <%= @offer.availiblity_start_date %>, to: <%= @offer.availibility_end_date %></p>
-<p>Price: <%= @offer.price %> euros</p>
+  <div class="d-flex justify-content-around w-60">
+    <div class="image-card">
+      <%= cl_image_tag @offer.photo.key, class: "card-show-img" %>
+    </div>
 
-<%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn btn-secondary"%>
-<%=link_to "Back to offers", offers_path, class: "btn btn-secondary"%>
+    <div class="card-info">
+      <div>
+        <p><%= @offer.description%></p>
+        <br>
+        <p>Availible from: <%= @offer.availiblity_start_date %>, to: <%= @offer.availibility_end_date %></p>
+        <p>Price: <%= @offer.price %> euros</p>
+      </div>
 
+      <div class="btn-book d-flex justify-content-between">
+        <%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn btn-secondary"%>
+        <%=link_to "Back to offers", offers_path, class: "btn btn-secondary"%>
+      </div>
 <% if policy(@offer).update? %>
 <div class = "change-offer">
 <br>
@@ -17,4 +30,14 @@
 </div>
 <% end %>
 
-<%#picture to be inserted here%>
+      <% if policy(@offer).new? %>
+        <div class = "change-offer">
+          <br>
+          <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
+          <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

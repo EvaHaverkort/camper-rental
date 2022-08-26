@@ -13,7 +13,6 @@
           <h6 class="card-title"><%= offer.brand %></h6>
           <p class="card-text">€<%= offer.price %></p>
           <%=link_to "More Details", offer_path(offer), class: "btn-ghost-details" %>
-          <%=link_to "Book", offer_bookings_path(offer), class: "btn-ghost-details" %>
         </div>
       </div>
     <%end %>
