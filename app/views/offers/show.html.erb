@@ -9,12 +9,12 @@
 <%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn btn-secondary"%>
 <%=link_to "Back to offers", offers_path, class: "btn btn-secondary"%>
 
+<% if policy(@offer).new? %>
 <div class = "change-offer">
 <br>
 <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
 <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-
 </div>
-
+<% end %>
 
 <%#picture to be inserted here%>
