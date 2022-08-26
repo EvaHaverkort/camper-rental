@@ -11,7 +11,9 @@ class OfferPolicy < ApplicationPolicy
   end
 
   def create?
-    #current_user = user
+    # current_user = user
+    return false if user.nil?
+
     user.user_type == "owner"
   end
 
@@ -20,6 +22,7 @@ class OfferPolicy < ApplicationPolicy
   # end
 
   def update?
+    return false if user.nil?
     user.user_type == "owner"
     # where(user: user)
   end
