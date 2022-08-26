@@ -1,20 +1,44 @@
-<%= @offer.name %>
-<p>brand: <%= @offer.brand %></p>
-<p><%= @offer.description%></p>
-<br>
+<div class="container centered-margin">
+  <div class="margin-left">
+    <h5><%= @offer.name %></h5>
+    <h6><%= @offer.brand %></h6>
+  </div>
+  <br>
+  <div class="d-flex justify-content-around">
+    <div class="image-card" style="width: 25rem;">
+      <%= cl_image_tag @offer.photo.key, class: "card-show-img" %>
+    </div>
 
-<p>Availible from: <%= @offer.availiblity_start_date %>, to: <%= @offer.availibility_end_date %></p>
-<p>Price: <%= @offer.price %> euros</p>
+    <div class="card-info">
+      <div class="card-info-text">
+        <p><%= @offer.description%></p>
+        <br>
+        <p>Availible from: <%= @offer.availiblity_start_date %>, to: <%= @offer.availibility_end_date %></p>
+        <p>Price: <%= @offer.price %>€</p>
+      </div>
 
-<%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn btn-secondary"%>
-<%=link_to "Back to offers", offers_path, class: "btn btn-secondary"%>
+      <div class="btn-book d-flex justify-content-around">
+        <%=link_to "Book now!", new_offer_booking_path(params[:id]), class: "btn-ghost-details"%>
+        <%=link_to "Back to offers", offers_path, class: "btn-ghost-details"%>
+      </div>
+<%# <% if policy(@offer).update? %>
+<%# <div class = "change-offer">
+<br> %>
+<%# <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
+<%# <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+<%# </div>
+<% end %>
 
-<div class = "change-offer">
-<br>
-<%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn btn-outline-secondary"%>
-<%=link_to "Delete this offer", offer_path(params[:id]), class: "btn btn-outline-secondary", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-
+      <% if policy(@offer).new? %>
+        <div class = "change-offer">
+          <br>
+          <div class="d-flex justify-content-around">
+            <%=link_to "Edit this offer", edit_offer_path(params[:id]), class: "btn-ghost-details"%>
+            <%=link_to "Delete this offer", offer_path(params[:id]), class: "btn-ghost-details", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<%#picture to be inserted here%>

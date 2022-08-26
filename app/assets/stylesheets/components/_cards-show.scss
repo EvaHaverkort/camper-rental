@@ -1,0 +1,38 @@
+
+.card-icons i {
+  color: #84a98c;
+  font-size: 24px;
+  margin-right: 25px;
+}
+
+.card-icons.d-flex {
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
+.card-icons.d-flex p {
+  font-size: 13px;
+  text-align: center;
+}
+
+.card-show-img {
+  width: 120%;
+  height: 445px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+.margin-left {
+  margin-left: 145px;
+}
+
+.card-info-text {
+  flex-grow: 1;
+}

@@ -3,21 +3,34 @@
   <div class="cards-grid-index">
     <% @offers.each do |offer| %>
       <div class="card flex-column" style="width: 18rem;">
+      <% if offer.photo.attached? %>
         <%= cl_image_tag offer.photo.key, class: "card-index-img" %>
+      <% else %>
+        <%= image_tag "camper-van.png" %>
+        <% end %>
         <div class="card-body">
-          <h5 class="card-title"><%= offer.brand %></h5>
+          <h5 class="card-name"><%= offer.name %></h5>
+          <h6 class="card-title"><%= offer.brand %></h6>
           <p class="card-text">€<%= offer.price %></p>
-          <%=link_to "More Details", offer_path(offer), class: "btn btn-secondary" %>
-          <%=link_to "Book", offer_bookings_path(offer), class: "btn btn-secondary" %>
+          <%=link_to "More Details", offer_path(offer), class: "btn-ghost-details" %>
         </div>
       </div>
     <%end %>
   </div>
 </div>
 
-<%=link_to "Add new offer", new_offer_path, class: "btn btn-secondary"%>
+
 
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+
+<%# if policy(Offer).new? # check if the user is authorized to see this button%>
+<%#=link_to "Add new offer", new_offer_path, class: "btn-ghost-details"%>
+<%# end %>
+
+<% if policy(Offer.new).new? # check if the user is authorized to see this button%>
+<%=link_to "Add new offer", new_offer_path, class: "btn btn-secondary"%>
+<% end %>
