@@ -9,7 +9,7 @@ class OfferPolicy < ApplicationPolicy
   def show?
     true
   end
-  
+
   def create?
     #current_user = user
     user.user_type == "owner"
@@ -21,9 +21,11 @@ class OfferPolicy < ApplicationPolicy
 
   def update?
     user.user_type == "owner"
+    # where(user: user)
   end
 
   def destroy?
     user.user_type == "owner"
+    # where(user: user)
   end
 end
