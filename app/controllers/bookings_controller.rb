@@ -25,7 +25,8 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
     # @booking.final_price = @offer.price
     if @booking.save
-      redirect_to bookings_path(@booking)
+      flash[:notice] = 'You have successfully booked'
+      redirect_to booking_path(@booking)
     else
       render :new, status: :unprocessable_entity
     end
