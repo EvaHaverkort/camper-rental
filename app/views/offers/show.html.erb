@@ -4,9 +4,8 @@
     <h6><%= @offer.brand %></h6>
   </div>
   <br>
-
-  <div class="d-flex justify-content-around w-60">
-    <div class="image-card">
+  <div class="d-flex justify-content-around">
+    <div class="image-card" style="width: 25rem;">
       <%= cl_image_tag @offer.photo.key, class: "card-show-img" %>
     </div>
 
@@ -15,7 +14,7 @@
         <p><%= @offer.description%></p>
         <br>
         <p>Availible from: <%= @offer.availiblity_start_date %>, to: <%= @offer.availibility_end_date %></p>
-        <p>Price: <%= @offer.price %> euros</p>
+        <p>Price: <%= @offer.price %>€</p>
       </div>
 
       <div class="btn-book d-flex justify-content-between">
